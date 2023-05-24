@@ -1,0 +1,20 @@
+create table japanese_store (inventory_id integer primary key, item text, type text, price numeric);
+
+insert into japanese_store values 
+(1, "kimono", "red", 102.15), 
+(2, "kimono", "light blue", 122.45), 
+(3, "kimono", "pink", 102.15), 
+(4, "kimono", "floral", 122.45), 
+(5, "ramune", "grape", 3.45), 
+(6, "ramune", "lychee", 3.45), 
+(7, "ramune", "peach", 3.45), 
+(8, "ramune", "strawberry", 3.45), 
+(9, "mochi", "daifuku", 4.23), 
+(10, "mochi", "warabi", 5.20), 
+(11, "mochi", "kinako", 4.23),
+(12, "kokeshi doll", "blue", 14.46),
+(13, "kokeshi doll", "red", 14.46), 
+(14, "onigiri", "mentai", 4.02), 
+(15, "onigiri", "maguro", 4.02);
+
+select sum(price), item from japanese_store group by item
