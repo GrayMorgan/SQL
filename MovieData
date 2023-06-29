@@ -1,0 +1,15 @@
+## this project used the data from a Netflix database stored at http://sqlfiddle.com/#!17/7dae0/16/0
+
+
+select count(*) from “netflix_titles_info” 
+where type = ‘Movie”;
+
+select max(date(date_added)) from “netflix_titles_info”;
+
+select title from “netflix_titles_info” 
+order by title asc;
+
+select np.show_id, director, title
+from "netflix_people" np full outer join "netflix_titles_info" nt on np.show_id = nt.show_id where title = 'The Starling';
+
+select release_year, title from "netflix_titles_info" where type='Movie' order by release_year asc limit 1;
